@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f6f6f6;
+}
+
+.header {
+    background: #42215d;
+    padding: 30px 20px;
+    color: white;
+    border-radius: 0 0 25px 25px;
+}
+
+.welcome {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+}
+
+main {
+    padding: 15px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.agendamento-card, .locacao-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 12px;
+    padding: 12px;
+    margin-top: 10px;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.data-card, .hora-card {
+    margin-left: auto;
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: 1px solid #8b83af;
+    text-align: center;
+    font-size: 13px;
+    min-width: 55px;
+}
+
+.icon-user {
+    width: 40px;
+    height: 40px;
+    background: #000;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.bottom-menu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+}
+
+.menu-item {
+    font-size: 14px;
+    color: #777;
+}
+
+.menu-item.active {
+    color: #42215d;
+    font-weight: bold;
+}

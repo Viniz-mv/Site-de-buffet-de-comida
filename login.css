@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background: #2b0065;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    width: 85%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .logo {
+    width: 180px;
+    margin-bottom: 30px;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    background: #f1f1f1;
+    padding: 12px;
+    border-radius: 25px;
+    margin-bottom: 15px;
+  }
+  
+  .input-group i {
+    margin-right: 10px;
+    color: #666;
+  }
+  
+  .input-group input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  .forgot {
+    color: #cfcfcf;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 15px;
+    text-decoration: none;
+  }
+  
+  button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  
+  #btnLogin {
+    background: #6b3ffd;
+    color: #fff;
+  }
+  
+  .divider {
+    border-bottom: 1px solid #aaa;
+    margin: 15px 0;
+  }
+  
+  .signup {
+    font-size: 13px;
+    color: #fff;
+  }
+  
+  .signup a {
+    color: #6b9bff;
+    text-decoration: none;
+  }
+  
+  .ou {
+    margin-top: 10px;
+    color: #fff;
+  }
+  
+  .social {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 10px;
+  }
+  
+  .social button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 18px;
+  }
+  
+  .facebook {
+    background: #3b5998;
+    color: #fff;
+  }
+  
+  .google {
+    background: #fff;
+    color: #444;
+  }
+  
