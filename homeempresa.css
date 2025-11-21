@@ -1,19 +1,17 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f6f6f6;
+    background: #1b0026; /* Roxo escuro moderno */
+    color: #fff;
 }
 
+/* HEADER */
 .header {
-    background: #42215d;
-    padding: 30px 20px;
+    background: #4c1c9c; /* Roxo médio moderno */
+    padding: 25px 20px;
     color: white;
     border-radius: 0 0 25px 25px;
-}
-
-.welcome {
-    font-size: 18px;
-    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
 .search-bar input {
@@ -21,33 +19,64 @@ body {
     padding: 12px;
     border-radius: 25px;
     border: none;
+    background: #3c0d82;
+    color: white;
 }
 
 main {
-    padding: 15px;
+    padding: 20px;
 }
 
 h2 {
-    font-size: 18px;
-    margin-top: 20px;
+    margin-top: 25px;
+    font-size: 20px;
 }
 
-.agendamento-card, .locacao-card {
+/* CARDS */
+.agendamento-card,
+.locacao-card {
     display: flex;
     align-items: center;
-    background: white;
+    background: #3c0d82;
     border-radius: 12px;
-    padding: 12px;
-    margin-top: 10px;
+    padding: 15px;
+    margin-top: 12px;
+    border: 1px solid #5e2ea8;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.45);
 }
 
 .avatar {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 12px;
 }
 
+.icon-user {
+    width: 40px;
+    height: 40px;
+    background: #4c1c9c;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.nome {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.tel {
+    font-size: 13px;
+    color: #d3c4ff;
+}
+
+.stars {
+    font-size: 14px;
+    color: #ffd700;
+}
+
+/* Datas */
 .data-card, .hora-card {
     margin-left: auto;
     padding: 8px 10px;
@@ -56,34 +85,29 @@ h2 {
     text-align: center;
     font-size: 13px;
     min-width: 55px;
+    color: #fff;
 }
 
-.icon-user {
-    width: 40px;
-    height: 40px;
-    background: #000;
-    border-radius: 50%;
-    margin-right: 12px;
-}
-
+/* MENU INFERIOR */
 .bottom-menu {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background: #fff;
+    background: #4c1c9c;
     display: flex;
     justify-content: space-around;
     padding: 12px 0;
-    border-radius: 20px 20px 0 0;
-    box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.4);
 }
 
 .menu-item {
-    font-size: 14px;
-    color: #777;
+    font-size: 15px;
+    color: #d3c4ff;
+    text-align: center;
+    cursor: pointer;
 }
 
 .menu-item.active {
-    color: #42215d;
+    color: #fff;
     font-weight: bold;
 }

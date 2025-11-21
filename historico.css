@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #1b0026; /* Fundo sólido */
+  margin: 0;
+  padding-bottom: 90px;
+  color: #fff;
+}
+
+/* HEADER */
+.header {
+  background: #6e00ff; /* Cor sólida roxa */
+  color: white;
+  padding: 18px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  box-shadow: 0 0 15px #8b2dff; /* Brilho neon */
+}
+
+/* LISTA DE PEDIDOS */
+.history-list {
+  padding: 20px;
+}
+
+.order-card {
+  background: #24003A; /* Sólido roxo escuro */
+  padding: 18px;
+  border-radius: 15px;
+  box-shadow: 0 0 12px rgba(255, 0, 200, 0.35);
+  margin-bottom: 15px;
+  border: 1px solid #ff47c6; /* Neon rosa */
+}
+
+.order-card h4 {
+  margin: 0 0 12px;
+  color: #ff9df2;
+  font-size: 18px;
+}
+
+.order-items {
+  margin-top: 10px;
+  color: #f2d9ff;
+  font-size: 15px;
+}
+
+.order-total {
+  margin-top: 12px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #ff47c6;
+}
+
+.empty {
+  text-align: center;
+  color: #d5b6ff;
+  margin-top: 40px;
+  font-size: 16px;
+}
+
+/* MENU INFERIOR */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #250036; /* Sólido */
+  border-top: 1px solid #7a0099;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  box-shadow: 0 -3px 10px rgba(255, 0, 200, 0.3);
+}
+
+.nav-item {
+  background: none;
+  border: none;
+  text-align: center;
+  font-size: 18px;
+  color: #d5b6ff;
+  cursor: pointer;
+}
+
+.nav-item span {
+  display: block;
+  font-size: 13px;
+}
+
+.nav-item.active {
+  color: #ff47c6;
+  font-weight: bold;
+  text-shadow: 0 0 8px #ff47c6;
+}

@@ -1,106 +1,104 @@
-const products = [
-    {
-      id: 1,
-      name: "Buffet Crepe",
-      location: "Diadema SP",
-      description: "Nosso Buffet de Crepe em Domicílio oferece sofisticação, sabor e praticidade para seus eventos.",
-      price: 380,
-      image: "https://media.istockphoto.com/id/482305605/pt/foto/crepes-com-chocolate-creme.jpg?s=612x612&w=0&k=20&c=aFhHXs-cQEuADU1fJyE3JkDYgrHneuUcWCAQxeJ4zIc="
-    },
-    {
-      id: 2,
-      name: "Buffet Pizza",
-      location: "São Paulo SP",
-      description: "Buffet de pizza com variedade e sabor incrível para festas.",
-      price: 280,
-      image: "https://media.istockphoto.com/id/521403691/pt/foto/quente-feito-em-casa-pizza-de-pepperoni.jpg?s=612x612&w=0&k=20&c=KWGroPbutn4ruhgedMeQ6vvPhFULRrnCMtV5coxr1AI="
-    },
-    {
-        id: 3,
-        name: "Buffet Crepe",
-        location: "Diadema SP",
-        description: "Nosso Buffet de Crepe em Domicílio oferece sofisticação, sabor e praticidade para seus eventos.",
-        price: 400,
-        image: "https://media.istockphoto.com/id/482305605/pt/foto/crepes-com-chocolate-creme.jpg?s=612x612&w=0&k=20&c=aFhHXs-cQEuADU1fJyE3JkDYgrHneuUcWCAQxeJ4zIc="
-      },
-      {
-        id: 4,
-        name: "Buffet Pizza",
-        location: "São Paulo SP",
-        description: "Buffet de pizza com variedade e sabor incrível para festas.",
-        price: 250,
-        image: "https://media.istockphoto.com/id/521403691/pt/foto/quente-feito-em-casa-pizza-de-pepperoni.jpg?s=612x612&w=0&k=20&c=KWGroPbutn4ruhgedMeQ6vvPhFULRrnCMtV5coxr1AI="
-      },
-      {
-        id: 5,
-        name: "Buffet Crepe",
-        location: "Diadema SP",
-        description: "Nosso Buffet de Crepe em Domicílio oferece sofisticação, sabor e praticidade para seus eventos.",
-        price: 320,
-        image: "https://media.istockphoto.com/id/482305605/pt/foto/crepes-com-chocolate-creme.jpg?s=612x612&w=0&k=20&c=aFhHXs-cQEuADU1fJyE3JkDYgrHneuUcWCAQxeJ4zIc="
-      },
-      {
-        id: 6,
-        name: "Buffet Pizza",
-        location: "São Paulo SP",
-        description: "Buffet de pizza com variedade e sabor incrível para festas.",
-        price: 150,
-        image: "https://media.istockphoto.com/id/521403691/pt/foto/quente-feito-em-casa-pizza-de-pepperoni.jpg?s=612x612&w=0&k=20&c=KWGroPbutn4ruhgedMeQ6vvPhFULRrnCMtV5coxr1AI="
-      },
-  
-    {
-      id: 1,
-      name: "Buffet Crepe",
-      location: "Diadema SP",
-      description: "Nosso Buffet de Crepe em Domicílio oferece sofisticação, sabor e praticidade para seus eventos.",
-      price: 380,
-      image: "https://media.istockphoto.com/id/482305605/pt/foto/crepes-com-chocolate-creme.jpg?s=612x612&w=0&k=20&c=aFhHXs-cQEuADU1fJyE3JkDYgrHneuUcWCAQxeJ4zIc="
-    },
-    {
-      id: 2,
-      name: "Buffet Pizza",
-      location: "São Paulo SP",
-      description: "Buffet de pizza com variedade e sabor incrível para festas.",
-      price: 280,
-      image: "https://media.istockphoto.com/id/521403691/pt/foto/quente-feito-em-casa-pizza-de-pepperoni.jpg?s=612x612&w=0&k=20&c=KWGroPbutn4ruhgedMeQ6vvPhFULRrnCMtV5coxr1AI="
-    }
+document.addEventListener("DOMContentLoaded", () => {
+
+  const username = localStorage.getItem("username") || "Convidado";
+  document.getElementById("username").textContent = `Hey, ${username}!`;
+
+  const products = [
+    { name: "Coxinha", price: 5.00, img: "https://tse1.explicit.bing.net/th/id/OIP.y5lCjszLsBBJlykd_T7TJAHaE6?rs=1&pid=ImgDetMain&o=7&rm=3" },
+    { name: "Mini Pizza", price: 6.50, img: "https://alegrafoods.com.br/wp-content/uploads/2025/01/mini-pizza-de-calabresa.jpg" },
+    { name: "Brigadeiro", price: 2.50, img: "https://t3.ftcdn.net/jpg/00/51/25/70/360_F_51257090_nRwT7YiPRp6TTyB6YnipFrxfd7XLGQLt.jpg" },
+    { name: "Esfirra", price: 4.00, img: "https://img.saborosos.com.br/imagens/esfiha-aberta-de-carne.jpg" },
+    { name: "Beijinho", price: 2.50, img: "https://ogimg.infoglobo.com.br/rio/bairros/24074836-749-05e/FT1086A/652/Carolina-Sales-Beijinho-de-coco.jpg" },
+    { name: "Kibe", price: 5.50, img: "https://receitasdepesos.com.br/wp-content/uploads/2023/06/kibe.jpg" }
   ];
+
   const productList = document.getElementById("product-list");
-const searchInput = document.getElementById("search");
+  const searchInput = document.getElementById("search");
 
-function renderProducts(filteredProducts = products) {
-  productList.innerHTML = "";
+  const modal = document.getElementById("modal");
+  const modalName = document.getElementById("modalProductName");
 
-  if (filteredProducts.length === 0) {
-    productList.innerHTML = `<p style="text-align:center; color:#666;">Nenhum resultado encontrado</p>`;
-    return;
-  }
+  const addBtn = document.getElementById("addBtn");
+  const cancelBtn = document.getElementById("cancelBtn");
 
-  filteredProducts.forEach(product => {
-    const card = document.createElement("div");
-    card.className = "product-card";
-    card.innerHTML = `
-      <img src="${product.image}" alt="${product.name}">
-      <h4>${product.name}</h4>
-      <p>${product.location}</p>
-      <p>${product.description}</p>
-      <p>R$${product.price.toFixed(2)}</p>
-    `;
-    productList.appendChild(card);
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let selectedProduct = null;
+
+  const cartCount = document.getElementById("cart-count");
+
+  const updateCartCount = () => {
+    cartCount.textContent = cart.length;
+    localStorage.setItem("cart", JSON.stringify(cart));
+  };
+
+  const openModal = (product) => {
+    selectedProduct = product;
+    modalName.textContent = product.name;
+    modal.style.display = "flex";
+  };
+
+  const closeModal = () => {
+    modal.style.display = "none";
+  };
+
+  const renderProducts = (items) => {
+    productList.innerHTML = "";
+    items.forEach(p => {
+      const card = document.createElement("div");
+      card.classList.add("product-card");
+
+      card.innerHTML = `
+        <img src="${p.img}">
+        <h4>${p.name}</h4>
+        <p>R$ ${p.price.toFixed(2)}</p>
+      `;
+
+      card.addEventListener("click", () => openModal(p));
+      productList.appendChild(card);
+    });
+  };
+
+  addBtn.addEventListener("click", () => {
+    const date = document.getElementById("serviceDate").value;
+    const time = document.getElementById("serviceTime").value;
+    const location = document.getElementById("serviceLocation").value;
+    const quantity = document.getElementById("serviceQuantity").value;
+
+    if (!date || !time || !location) {
+      alert("Preencha todos os campos!");
+      return;
+    }
+
+    cart.push({
+      ...selectedProduct,
+      serviceDate: date,
+      serviceTime: time,
+      serviceLocation: location,
+      quantity: quantity
+    });
+
+    updateCartCount();
+    closeModal();
+    alert("Serviço adicionado com sucesso!");
   });
-}
 
-searchInput.addEventListener("input", (event) => {
-  const text = event.target.value.toLowerCase();
-  const filtered = products.filter(p =>
-    p.name.toLowerCase().includes(text) ||
-    p.location.toLowerCase().includes(text)
-  );
-  renderProducts(filtered);
+  cancelBtn.addEventListener("click", closeModal);
+
+  renderProducts(products);
+  updateCartCount();
+
+  searchInput.addEventListener("input", () => {
+    const q = searchInput.value.toLowerCase();
+    const filtered = products.filter(p =>
+      p.name.toLowerCase().includes(q)
+    );
+    renderProducts(filtered);
+  });
+
+  /* Navegação */
+  document.getElementById("home-btn").onclick = () => window.location.href = "home.html";
+  document.getElementById("categories-btn").onclick = () => window.location.href = "categorias.html";
+  document.getElementById("history-btn").onclick = () => window.location.href = "historico.html";
+  document.getElementById("cart-btn").onclick = () => window.location.href = "carrinho.html";
+
 });
-
-renderProducts();
-const nomeSalvo = localStorage.getItem("nomeUsuario");
-if (nomeSalvo) {
-  document.getElementById("username").textContent = `Hey, ${nomeSalvo}!`;
-}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho - Buffet</title>
+  <link rel="stylesheet" href="carrinho.css">
+</head>
+<body>
+
+  <header class="header">
+    <h2>Seu Carrinho</h2>
+  </header>
+
+  <main>
+    <section class="cart-section">
+      <div id="cart-items"></div>
+      <p id="empty-cart-message">Seu carrinho está vazio.</p>
+
+      <div class="cart-total">
+        <h3>Total: R$ <span id="cart-total">0,00</span></h3>
+        <button id="checkoutBtn">Finalizar Pedido</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal de pagamento -->
+  <div id="paymentModal" class="modal">
+    <div class="modal-content">
+
+      <h2>Forma de Pagamento</h2>
+
+      <div class="payment-option">
+        <input type="radio" name="payment" value="pix">
+        <label>PIX</label>
+      </div>
+
+      <div class="payment-option">
+        <input type="radio" name="payment" value="dinheiro">
+        <label>Dinheiro</label>
+      </div>
+
+      <div class="payment-option">
+        <input type="radio" name="payment" value="cartão">
+        <label>Cartão</label>
+      </div>
+
+      <!-- Formulário do Cartão -->
+      <div id="cardForm" class="hidden">
+        <h3>Dados do Cartão</h3>
+        <input type="text" id="cardNumber" placeholder="Número do cartão">
+        <input type="text" id="cardName" placeholder="Nome no cartão">
+        <input type="month" id="cardDate">
+        <input type="text" id="cardCVV" placeholder="CVV">
+      </div>
+
+      <button id="confirmPaymentBtn">Confirmar Pagamento</button>
+      <button id="closeModalBtn" class="cancelBtn">Cancelar</button>
+    </div>
+  </div>
+
+  <!-- MENU INFERIOR -->
+  <nav class="bottom-nav">
+    <button class="nav-item" id="home-btn">Home</button>
+    <button class="nav-item" id="cart-btn">Categorias</button>
+    <button class="nav-item" id="services-btn">Histórico</button>
+    <button class="nav-item active" id="more-btn">Carrinho</button>
+  </nav>
+
+  <script src="carrinho.js"></script>
+</body>
+</html>

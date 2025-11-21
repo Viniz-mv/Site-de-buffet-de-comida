@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Buffet Home</title>
   <link rel="stylesheet" href="home.css">
 </head>
+
 <body>
+
   <header>
     <div class="greeting">
       <h2 id="username">Hey!</h2>
-      <div class="notifications">3</div>
+      <div class="notifications" id="cart-count">0</div>
     </div>
-    <input type="text" id="search" placeholder="Search Products or store">
+
+    <input type="text" id="search" placeholder="Buscar produtos ou loja...">
   </header>
 
   <main>
@@ -20,7 +24,41 @@
     <div class="product-list" id="product-list"></div>
   </main>
 
+  <nav class="bottom-nav">
+    <button class="nav-item active" id="home-btn"><span>Home</span></button>
+    <button class="nav-item" id="categories-btn"><span>Categorias</span></button>
+    <button class="nav-item" id="history-btn"><span>Histórico</span></button>
+    <button class="nav-item" id="cart-btn"><span>Carrinho</span></button>
+  </nav>
+
+  <!-- MODAL -->
+  <div class="modal-bg" id="modal">
+    <div class="modal-box">
+      <h3 id="modalProductName"></h3>
+      <p>Escolha os detalhes do serviço:</p>
+
+      <label>Dia:</label>
+      <input type="date" id="serviceDate">
+
+      <label>Horário:</label>
+      <input type="time" id="serviceTime">
+
+      <label>Local:</label>
+      <input type="text" id="serviceLocation" placeholder="Ex: Rua 12, Nº 99, Centro">
+
+      <div class="modal-field">
+        <label>🔢 Quantidade</label>
+        <input type="number" id="serviceQuantity" min="1" value="1">
+      </div>
+
+      <div class="modal-buttons">
+        <button id="cancelBtn">Cancelar</button>
+        <button id="addBtn">Adicionar</button>
+      </div>
+    </div>
+  </div>
+
   <script src="home.js"></script>
 </body>
-</html>
 
+</html>

@@ -8,58 +8,62 @@
 </head>
 <body>
 
-    <header class="header">
-        <h2 id="username">Hey!</h2>
-        <div class="search-bar">
-            <input type="text" placeholder="Search Products or store">
+<header class="header">
+    <h2 id="username">Hey!</h2>
+    <div class="search-bar">
+        <input type="text" placeholder="Buscar produtos ou cliente...">
+    </div>
+</header>
+
+<main>
+
+    <!-- AGENDAMENTOS -->
+    <section class="agendamentos">
+        <h2>Agendamentos</h2>
+
+        <div class="agendamento-card">
+            <img src="https://i.pravatar.cc/100" class="avatar">
+            <div>
+                <p class="nome">Kaique</p>
+                <p class="tel">+55 11 99999-0000</p>
+            </div>
+            <div class="data-card">Jun<br>10</div>
+            <div class="hora-card">19:30</div>
         </div>
-    </header>
+    </section>
 
-    <main>
-        <section class="agendamentos">
-            <h2>Agendamentos</h2>
+    <!-- LOCAÇÕES -->
+    <section class="locacoes">
+        <h2>Últimas Locações</h2>
 
-            <div class="agendamento-card">
-                <img src="https://i.pravatar.cc/100" class="avatar">
-                <div>
-                    <p class="nome">Kaique</p>
-                    <p class="tel">+91 1234567890</p>
-                </div>
-                <div class="data-card">Jun<br>10</div>
-                <div class="hora-card">07:30 PM</div>
+        <div class="locacao-card">
+            <div class="icon-user"></div>
+            <div>
+                <p class="nome">Fernando</p>
+                <p class="tel">+55 11 95555-1212</p>
+                <p class="stars">★★★★★</p>
             </div>
-        </section>
+        </div>
 
-        <section class="locacoes">
-            <h2>Ultimas locações</h2>
-
-            <div class="locacao-card">
-                <div class="icon-user"></div>
-                <div>
-                    <p class="nome">Fernando</p>
-                    <p class="tel">+91 1234567890</p>
-                    <p class="stars">★★★★★</p>
-                </div>
+        <div class="locacao-card">
+            <div class="icon-user"></div>
+            <div>
+                <p class="nome">Henrique</p>
+                <p class="tel">+55 11 91234-8888</p>
+                <p class="stars">★★★★★</p>
             </div>
+        </div>
+    </section>
 
-            <div class="locacao-card">
-                <div class="icon-user"></div>
-                <div>
-                    <p class="nome">Henrique</p>
-                    <p class="tel">+91 1234567890</p>
-                    <p class="stars">★★★★★</p>
-                </div>
-            </div>
-        </section>
-    </main>
+</main>
 
-    <nav class="bottom-menu">
-        <div class="menu-item active">Home</div>
-        <div class="menu-item">Categorias</div>
-        <div class="menu-item">Serviços</div>
-        <div class="menu-item">Mais</div>
-    </nav>
+<!-- MENU INFERIOR -->
+<nav class="bottom-menu">
+    <div class="menu-item active" data-page="homeempresa.html">Home</div>
+    <div class="menu-item" data-page="categorias.html">Categorias</div>
+    <div class="menu-item" data-page="servicos.html">Serviços</div>
+    <div class="menu-item" data-page="mais.html">carrinho</div>
 
-<script src="script.js"></script>
+<script src="homeempresa.js"></script>
 </body>
 </html>
